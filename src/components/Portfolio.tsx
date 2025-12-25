@@ -2,7 +2,8 @@ import type { JSX } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import type { Project } from "../type";
 
-const movieGptVideoUrl = "/moviegpt.mp4";
+const movieGptVideoUrl =
+  "https://www.dropbox.com/scl/fi/isi8cmsa1gz9bt9glhtpf/Movie-GPT.mp4?rlkey=phz7ukvucfymrmsadnqjc0snq&st=xx29objo&dl=1";
 
 const projects: Project[] = [
   {
