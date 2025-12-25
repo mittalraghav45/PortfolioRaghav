@@ -11,11 +11,7 @@ const projects: Project[] = [
       "Web app for capturing and maintaining electronic health records.",
     url: "https://github.com/mittalraghav45/EHR",
   },
-  {
-    title: "E-Commerce app (MERN)",
-    description: "Fully functional e-commerce platform built on MERN stack.",
-    url: "https://github.com/mittalraghav45/ecomm-mern",
-  },
+  
   {
     title: "Pet Adoption Appp",
     description: "A platform to explore and adopt pets.",
@@ -89,9 +85,9 @@ export default function Portfolio(): JSX.Element {
             <button className="btn" onClick={() => setDark((d) => !d)}>
               Toggle {dark ? "Light" : "Dark"}
             </button>
-            {/* <button className="btn" onClick={() => window.print()}>
+            <button className="btn" onClick={() => window.print()}>
               Print / Save PDF
-            </button> */}
+            </button>
           </div>
         </div>
       </header>
