@@ -1,0 +1,276 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f1724;
+  --muted: #475569;
+  --border: #e6eef6;
+  --accent: #1d4ed8;
+}
+
+.dark {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --text: #f8fafc;
+  --muted: #aab6c8;
+  --border: #1f2937;
+  --accent: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  padding: 20px;
+}
+
+/* container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+.subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* header-right */
+.header-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.contact-line {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    monospace;
+  font-size: 13px;
+  color: var(--muted);
+}
+.mail {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 13px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.links a {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* controls */
+.controls {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text);  /* <-- ensures white text in dark mode */
+}
+
+/* optional: add hover for nicer interaction */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* main layout */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  padding: 22px;
+}
+.left {
+  min-width: 0;
+}
+.aside {
+  min-width: 0;
+}
+
+/* collapse on small screens */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .header-right {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+/* sections */
+.section {
+  margin-bottom: 18px;
+}
+.section h2 {
+  font-size: 15px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.section p,
+.section li {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* experience card */
+.exp {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.exp h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.exp .muted {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.exp ul {
+  margin: 8px 0 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* projects */
+.project {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.project a {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* aside cards */
+.aside-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.aside-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* footer */
+.footer {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* print styles: compact and remove UI elements */
+@media print {
+  body {
+    padding: 0;
+    background: white;
+    color: #000;
+  }
+  .container {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: none;
+  }
+  .header,
+  .footer,
+  .controls {
+    display: none;
+  }
+  .main {
+    gap: 8px;
+    padding: 0;
+  }
+  .project,
+  .exp,
+  .aside-card {
+    border: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+  }
+  .links a,
+  .btn {
+    display: none;
+  }
+}
