@@ -2,6 +2,8 @@ import type { JSX } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import type { Project } from "../type";
 
+const movieGptVideoUrl = "/moviegpt.mp4";
+
 const projects: Project[] = [
   {
     title: "EHR Web App",
@@ -211,6 +213,50 @@ export default function Portfolio(): JSX.Element {
 
           <section className="section">
             <h2>Projects</h2>
+            <div className="project project-featured">
+              <div className="project-head">
+                <strong>MovieGPT (GPTflix)</strong>
+                <div className="project-links">
+                  <a href="https://lnkd.in/gFXKuQjZ" target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                  <a href="https://lnkd.in/g-D_PZZb" target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                  <a href="https://lnkd.in/gbGP8H6r" target="_blank" rel="noreferrer">
+                    Walkthrough
+                  </a>
+                </div>
+              </div>
+              <p className="muted">
+                AI-powered movie search that understands natural language requests and serves
+                instant, personalized film picks with trailers and details.
+              </p>
+              <ul className="project-list">
+                <li>
+                  Built with React, Redux, Firebase, OpenAI GPT-3.5, TMDB API, and Tailwind CSS.
+                </li>
+                <li>
+                  Integrated dual APIs with async/Promise.all to cut search latency by ~60% while
+                  keeping the UI smooth.
+                </li>
+                <li>Designed, shipped end-to-end in 3 weeks.</li>
+              </ul>
+              <div className="project-embed" aria-label="MovieGPT live preview">
+                <video
+                  title="MovieGPT walkthrough"
+                  controls
+                  preload="metadata"
+                  poster=""
+                >
+                  <source src={movieGptVideoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="muted small">
+                  If the video does not play, open the Live Demo link above.
+                </div>
+              </div>
+            </div>
             {projects.map((p) => (
               <div key={p.title} className="project">
                 <div className="project-head">
