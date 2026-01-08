@@ -203,6 +203,16 @@ body {
   border: 1px solid var(--border);
   margin-bottom: 10px;
 }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: start;
+}
+.project-grid .project {
+  margin-bottom: 0;
+}
 .project-head {
   display: flex;
   justify-content: space-between;

@@ -11,18 +11,18 @@ const projects: Project[] = [
   {
     title: "EHR Web App",
     description:
-      "Web app for capturing and maintaining electronic health records.",
+      "Web app for capturing and maintaining electronic health records, improving data capture and retrieval for healthcare teams.",
     url: "https://github.com/mittalraghav45/EHR",
   },
-  
   {
-    title: "Pet Adoption Appp",
-    description: "A platform to explore and adopt pets.",
+    title: "Pet Adoption App",
+    description:
+      "Platform to explore and adopt pets, simplifying discovery and enquiry journeys for potential adopters.",
     url: "https://github.com/mittalraghav45/petadoption",
   },
 ];
 
-export default function Portfolio(): JSX.Element {
+export default function Portfolio1(): JSX.Element {
   const { dark, setDark } = useDarkMode(true);
 
   const jsonLd = {
@@ -50,14 +50,19 @@ export default function Portfolio(): JSX.Element {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <header className="header">
         <div>
           <h1 className="title">Raghav Mittal</h1>
           <div className="subtitle">
-            MSc Computer Science — Software Engineer
+            Full-Stack Application Engineer (React, Node.js, PHP, AWS)
           </div>
           <div className="meta">
-            Southampton, United Kingdom • Graduate visa holder
+            Southampton, United Kingdom • UK Graduate Visa (valid to Dec 2026)
+          </div>
+          <div className="meta">
+            Target roles: Frontend Developer, Full-Stack Engineer, Web / Digital
+            Services Developer
           </div>
         </div>
 
@@ -89,8 +94,11 @@ export default function Portfolio(): JSX.Element {
               Toggle {dark ? "Light" : "Dark"}
             </button>
             <button className="btn" onClick={() => window.print()}>
-              Print / Save PDF
+              Download CV (PDF)
             </button>
+            <a className="btn" href="mailto:mittalraghav45@gmail.com">
+              Contact me
+            </a>
           </div>
         </div>
       </header>
@@ -101,27 +109,39 @@ export default function Portfolio(): JSX.Element {
             <h2>Summary</h2>
             <p>
               MSc Computer Science graduate from the University of Southampton
-              with two years of experience in full-stack web development.
-            Proficient in React, Node.js and PHP. Experienced with AWS and
-            building scalable UIs and backends.
-          </p>
-        </section>
+              with two years&apos; experience in full-stack web development
+              across React, Node.js, and PHP. Comfortable building
+              data-heavy, scalable UIs and backends on AWS, with a track record
+              of improving performance, reliability, and user engagement in
+              commercial web applications.
+            </p>
+          </section>
 
           <aside className="aside">
-          <div className="aside-card">
-            <h3>Skills</h3>
-            <p>JavaScript / TypeScript / React / Node.js</p>
-            <p>PHP, LAMP, MERN</p>
-            <p>SQL / MongoDB</p>
-            <p>RabbitMQ, AWS</p>
-            <p>Git</p>
-          </div>
+            <div className="aside-card">
+              <h3>Skills</h3>
+              <p>
+                <strong>Frontend:</strong> JavaScript, TypeScript, React, Redux,
+                Tailwind CSS
+              </p>
+              <p>
+                <strong>Backend:</strong> Node.js, PHP (LAMP), Express, REST
+                APIs
+              </p>
+              <p>
+                <strong>Data &amp; Messaging:</strong> SQL, MongoDB, RabbitMQ
+              </p>
+              <p>
+                <strong>Cloud &amp; Tooling:</strong> AWS (S3, Lambda, IAM),
+                Git, Firebase, Firestore
+              </p>
+            </div>
 
             <div className="aside-card">
-            <h3>Hobbies</h3>
-            <p>Travelling • Reading • International relations</p>
-          </div>
-        </aside>
+              <h3>Hobbies</h3>
+              <p>Travelling • Reading • International relations</p>
+            </div>
+          </aside>
 
           <section className="section">
             <h2>Projects</h2>
@@ -130,32 +150,57 @@ export default function Portfolio(): JSX.Element {
                 <div className="project-head">
                   <strong>MovieGPT (GPTflix)</strong>
                   <div className="project-links">
-                    <a href="https://lnkd.in/gFXKuQjZ" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://lnkd.in/gFXKuQjZ"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Live Demo
                     </a>
-                    <a href="https://lnkd.in/g-D_PZZb" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://lnkd.in/g-D_PZZb"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       GitHub
                     </a>
-                    <a href="https://lnkd.in/gbGP8H6r" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://lnkd.in/gbGP8H6r"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Walkthrough
                     </a>
                   </div>
                 </div>
                 <p className="muted">
-                  AI-powered movie search that understands natural language requests and serves
-                  instant, personalized film picks with trailers and details.
+                  AI-powered movie discovery app that understands natural
+                  language queries and returns personalised film suggestions
+                  with trailers and key details.
                 </p>
                 <ul className="project-list">
                   <li>
-                    Built with React, Redux, Firebase, OpenAI GPT-3.5, TMDB API, and Tailwind CSS.
+                    <strong>Role:</strong> Solo developer responsible for
+                    design, build, integration, and deployment.
                   </li>
                   <li>
-                    Integrated dual APIs with async/Promise.all to cut search latency by ~60% while
-                    keeping the UI smooth.
+                    <strong>Stack:</strong> React, Redux, Tailwind CSS,
+                    Firebase, OpenAI GPT-3.5, TMDB API.
                   </li>
-                  <li>Designed, shipped end-to-end in 3 weeks.</li>
+                  <li>
+                    Implemented dual API calls with <code>Promise.all</code> to
+                    cut search latency by around 60%, keeping the UI responsive
+                    on slower connections.
+                  </li>
+                  <li>
+                    Designed a clean, responsive interface with card-based
+                    layouts optimised for desktop and tablet.
+                  </li>
                 </ul>
-                <div className="project-embed" aria-label="MovieGPT live preview">
+                <div
+                  className="project-embed"
+                  aria-label="MovieGPT live preview"
+                >
                   <video
                     title="MovieGPT walkthrough"
                     controls
@@ -175,32 +220,50 @@ export default function Portfolio(): JSX.Element {
                 <div className="project-head">
                   <strong>StreamBox</strong>
                   <div className="project-links">
-                    <a href="https://youtube-sable-three.vercel.app"
-                     target="_blank" rel="noreferrer">
+                    <a
+                      href="https://youtube-sable-three.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Live Demo
                     </a>
-                    <a href="https://github.com/mittalraghav45/youtube" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://github.com/mittalraghav45/youtube"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       GitHub
                     </a>
-                    
                   </div>
                 </div>
                 <p className="muted">
-                  Personalized streaming box that surfaces binge-worthy series and films with
-                  instant playback previews and genre-smart recommendations.
+                  Personalised streaming box that surfaces binge-worthy series
+                  and films with instant playback previews and
+                  genre-smart recommendations.
                 </p>
                 <ul className="project-list">
-                  <li>Built with React, Redux Toolkit,YT APIs, and Tailwind CSS.</li>
                   <li>
-                    Added watchlists, multi-profile support, and continue-watching rails backed by
-                    Firestore for real-time sync.
+                    <strong>Role:</strong> Solo developer owning UI, API
+                    integration, and deployment.
                   </li>
                   <li>
-                    Optimized video streaming with lazy-loaded hero banners and responsive cards for
-                    web and tablet layouts.
+                    <strong>Stack:</strong> React, Redux Toolkit, Tailwind CSS,
+                    YouTube APIs, Firestore.
+                  </li>
+                  <li>
+                    Added watchlists, multi-profile support, and
+                    continue-watching rails backed by Firestore for real-time
+                    sync.
+                  </li>
+                  <li>
+                    Optimised video streaming with lazy-loaded hero banners and
+                    responsive cards for web and tablet layouts.
                   </li>
                 </ul>
-                <div className="project-embed" aria-label="StreamBox live preview">
+                <div
+                  className="project-embed"
+                  aria-label="StreamBox live preview"
+                >
                   <video
                     title="StreamBox walkthrough"
                     controls
@@ -216,6 +279,7 @@ export default function Portfolio(): JSX.Element {
                 </div>
               </div>
             </div>
+
             {projects.map((p) => (
               <div key={p.title} className="project">
                 <div className="project-head">
@@ -239,16 +303,16 @@ export default function Portfolio(): JSX.Element {
               <div className="muted">June 2021 – August 2023</div>
               <ul>
                 <li>
-                  Optimized a tender upload platform by implementing a duplicate
+                  Optimised a tender upload platform by implementing a duplicate
                   detection algorithm using PHP and RabbitMQ, enabling parallel
                   data uploads from diverse vendors. Reduced upload time by 60%
                   and enabled the system to handle 40% more concurrent uploads.
                 </li>
                 <li>
-                  Enhanced the tender listing homepage using PHP and JavaScript,
-                  incorporating location-based filtering, category sorting, and
-                  relevance filters, which directly increased user engagement
-                  and boosted transactions by 15%.
+                  Enhanced the tender listing homepage using PHP and
+                  JavaScript, incorporating location-based filtering, category
+                  sorting, and relevance filters, which directly increased user
+                  engagement and boosted transactions by 15%.
                 </li>
                 <li>
                   Migrated critical cron jobs from physical servers to AWS,
@@ -269,11 +333,10 @@ export default function Portfolio(): JSX.Element {
                 <li>
                   Collaborated with the marketing team to conduct A/B testing on
                   email campaigns (SendGrid), leveraging embedded Google
-                  Analytics for data-driven insights and campaign optimization.
+                  Analytics for data-driven insights and campaign optimisation.
                 </li>
               </ul>
             </article>
- 
 
             <article className="exp">
               <h3>Intern — IndiaMart InterMesh Limited</h3>
@@ -284,26 +347,25 @@ export default function Portfolio(): JSX.Element {
                   Yii2, RabbitMQ, HTML, JavaScript, and CSS.
                 </li>
                 <li>
-                  Learned to do root cause analysis of the bugs with their
-                  documentation
+                  Learned to perform root cause analysis of bugs and maintain
+                  clear documentation.
                 </li>
               </ul>
             </article>
-
 
             <article className="exp">
               <h3>Barista — Café Local (Part-Time), United Kingdom</h3>
               <div className="muted">June 2024 – Present</div>
               <ul>
                 <li>
-                   Delivered friendly and fast-paced customer service in a busy
+                  Delivered friendly and fast-paced customer service in a busy
                   UK café environment.
                 </li>
                 <li>
-              Prepared coffees, teas, and specialty drinks while maintaining
-                  quality and consistency.
+                  Prepared coffees, teas, and speciality drinks while
+                  maintaining quality and consistency.
                 </li>
-                 <li>
+                <li>
                   Handled POS operations, cash/card payments, and shift closing
                   duties.
                 </li>
@@ -313,8 +375,6 @@ export default function Portfolio(): JSX.Element {
                 </li>
               </ul>
             </article>
-
-           
           </section>
 
           <section className="section">
@@ -342,12 +402,9 @@ export default function Portfolio(): JSX.Element {
             </ul>
           </section>
         </section>
-
-      
       </main>
 
       <footer className="footer">
-        {/* <div>Built with React • Printable single-page CV</div> */}
         <div className="muted">Last updated: 16/11/2025</div>
       </footer>
     </div>
