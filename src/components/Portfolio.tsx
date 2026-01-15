@@ -348,7 +348,7 @@ export default function Portfolio(): JSX.Element {
 
       <footer className="footer">
         {/* <div>Built with React • Printable single-page CV</div> */}
-        <div className="muted">Last updated: 16/11/2025</div>
+        <div className="muted">Last updated: 16/01/2025</div>
       </footer>
     </div>
   );
